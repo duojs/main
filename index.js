@@ -43,7 +43,7 @@ function entry(json) {
 
   if (compat(json)) {
     var type = extension(json.main);
-    switch\\\\\(type) {
+    switch(type) {
 
     }
   }
