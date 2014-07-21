@@ -1,7 +1,7 @@
 
 # duo-main
 
-  Figure out the entry into the component. Supports component's existing manifest format, while adding enhancements for Duo.
+  Figure out the entry into a component. Supports component's existing manifest format, while adding enhancements for Duo.
 
 ## API
 
