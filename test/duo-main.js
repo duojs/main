@@ -27,14 +27,14 @@ describe('duo-main', function() {
       it('should pull scripts when main is css', function() {
         var entries = main({ main: 'index.css', scripts: [ 'a.js', 'b.js'] });
         assert('index.css' == entries[0]);
-        assert('a.js' == entries[0]);
+        assert('a.js' == entries[1]);
         assert(2 == entries.length);
       })
 
       it('should pull styles when main is js', function() {
         var entries = main({ main: 'index.js', styles: [ 'a.css', 'b.css'] });
         assert('index.js' == entries[0]);
-        assert('a.css' == entries[0]);
+        assert('a.css' == entries[1]);
         assert(2 == entries.length);
       })
 

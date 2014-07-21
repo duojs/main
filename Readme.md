@@ -1,9 +1,48 @@
 
 # duo-main
 
-  get the entrypoint from a manifest
+  Figure out the entry into the component. Supports component's existing manifest format, while adding enhancements for Duo.
 
-## License 
+## API
+
+### main(json)
+
+This manifest is considered an entry. Fetch all the entries from `json`, returning an array.
+
+```json
+{
+  "main": "index.js",
+  "styles": [ "index.css" ]
+}
+```
+
+```js
+main(json) // [ "index.js", "index.css" ]
+```
+
+### main(json, type)
+
+This manifest is considered a dependency with an established type. Given the `type`, fetch a single entry point.
+
+```json
+{
+  "main": "index.js",
+  "styles": [ "index.css" ]
+}
+```
+
+```js
+main(json, 'css') // "index.css"
+```
+
+## Test
+
+```
+npm install
+make test
+```
+
+## License
 
 (The MIT License)
 
