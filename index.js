@@ -52,10 +52,14 @@ function entry(json) {
     case 'string': entries.push(main); break;
   }
 
-  if (compat(json)) {
+  if (!main || compat(json)) {
     switch (extension(main)) {
       case 'css': script && entries.push(script); break;
       case 'js': style && entries.push(style); break;
+      default:
+        script && entries.push(script);
+        style && entries.push(style);
+        break;
     }
   }
 
@@ -75,7 +79,7 @@ function dependency(json, ext) {
   var style = (json.styles || [])[0];
   var main = json.main;
 
-  if (compat(json)) {
+  if (!main || compat(json)) {
     if (ext == extension(json.main)) return main;
     else if (ext == extension(style)) return style;
     else if (ext == extension(script)) return script;
