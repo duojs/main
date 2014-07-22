@@ -56,7 +56,7 @@ function entry(json) {
     switch (extension(main)) {
       case 'css': script && entries.push(script); break;
       case 'js': style && entries.push(style); break;
-      default:
+      case '':
         script && entries.push(script);
         style && entries.push(style);
         break;
