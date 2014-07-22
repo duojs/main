@@ -38,6 +38,24 @@ describe('duo-main', function() {
         assert(2 == entries.length);
       })
 
+      it('should pull scripts when no main', function() {
+        var entries = main({ scripts: [ 'a.js', 'b.js'] });
+        assert('a.js' == entries[0]);
+        assert(1 == entries.length);
+      })
+
+      it('should pull styles when no main', function() {
+        var entries = main({ styles: [ 'a.css', 'b.css'] });
+        assert('a.css' == entries[0]);
+        assert(1 == entries.length);
+      })
+
+      it('should pull scripts and styles when no main', function() {
+        var entries = main({ scripts: [ 'a.js', 'b.js'], styles: [ 'a.css', 'b.css'] });
+        assert('a.js' == entries[0]);
+        assert('a.css' == entries[1]);
+        assert(2 == entries.length);
+      })
     });
 
     describe('main that is not css or js', function() {
@@ -97,6 +115,21 @@ describe('duo-main', function() {
         var entry = main({ main: 'index.js', styles: [ 'a.css', 'b.css' ]}, 'css');
         assert('a.css' == entry);
       })
+    })
+
+    it('should pull scripts when no main', function() {
+      var entry = main({ scripts: [ 'a.js', 'b.js'] }, 'js');
+      assert('a.js' == entry);
+    })
+
+    it('should pull styles when no main', function() {
+      var entry = main({ styles: [ 'a.css', 'b.css'] }, 'css');
+      assert('a.css' == entry);
+    })
+
+    it('should pull scripts or styles when no main', function() {
+      var entry = main({ scripts: [ 'a.js', 'b.js'], styles: [ 'a.css', 'b.css'] }, 'css');
+      assert('a.css' == entry);
     })
 
     describe('main string thats not css or js', function() {
