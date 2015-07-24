@@ -1,4 +1,12 @@
 
+0.0.4 / 2015-07-24
+==================
+
+  * Makefile: Add "node_modules" target
+  * ignore: Keep "node_modules" out of version control
+  * package: Add "license" field
+  * package: Fix "repository" and "main" fields
+
 0.0.3 / 2014-07-22
 ==================
 
