@@ -12,5 +12,6 @@
   "devDependencies": {
     "mocha": "*"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "license": "MIT"
 }
