@@ -4,10 +4,7 @@
   "description": "get the entrypoint from a manifest",
   "keywords": [],
   "author": "Matthew Mueller <mattmuelle@gmai.com>",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/MatthewMueller/duo-main.git"
-  },
+  "repository": "duojs/main",
   "dependencies": {
     "component-type": "^1.0.0",
     "mocha": "^1.20.1"
@@ -15,5 +12,5 @@
   "devDependencies": {
     "mocha": "*"
   },
-  "main": "index"
+  "main": "index.js"
 }
