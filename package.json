@@ -1,6 +1,6 @@
 {
   "name": "duo-main",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "get the entrypoint from a manifest",
   "keywords": [],
   "author": "Matthew Mueller <mattmuelle@gmai.com>",
