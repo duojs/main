@@ -132,5 +132,6 @@ function values(obj) {
  */
 
 function extension(path) {
+  if (typeof path !== 'string') return '';
   return extname(path).slice(1);
 }
